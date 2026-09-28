@@ -6,11 +6,33 @@ body {
     margin: 0;
 }
 
-/* Website heading area */
+/* Header with repeated faded Las Vegas sign background */
 header {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
     background-color: #7f1d1d;
-    padding: 35px;
+    padding: 50px 35px;
     text-align: center;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    background-image: url("images/las-vegas-sign.jpg");
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 260px auto;
+    opacity: 0.22;
+    mix-blend-mode: screen;
+}
+
+header h1,
+header p {
+    position: relative;
+    z-index: 1;
 }
 
 header h1 {
@@ -20,6 +42,7 @@ header h1 {
 }
 
 header p {
+    color: #ffffff;
     font-size: 18px;
 }
 
@@ -66,16 +89,18 @@ li {
     line-height: 1.6;
 }
 
-/* Website image */
+/* Website images */
 main img {
     display: block;
     width: 100%;
     max-width: 850px;
+    max-height: 600px;
+    object-fit: contain;
     margin: 20px auto;
     border-radius: 8px;
 }
 
-/* Image credit */
+/* Image credits */
 .image-credit {
     color: #d1d5db;
     font-size: 13px;
