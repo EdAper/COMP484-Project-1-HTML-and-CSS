@@ -160,9 +160,42 @@ button:hover {
     background-color: #ffffff;
 }
 
-/* Bottom of the page */
+/* Footer with repeated poker chip background */
 footer {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
     background-color: #7f1d1d;
-    padding: 20px;
+    padding: 35px 20px;
     text-align: center;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    background-image: url("images/chip.png");
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 95px auto;
+    opacity: 0.28;
+}
+
+/* Styled footer text */
+footer p {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin: 0;
+    padding: 7px 20px;
+    color: #facc15;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
+    background-color: rgba(17, 24, 39, 0.45);
+    border-top: 1px solid rgba(250, 204, 21, 0.7);
+    border-bottom: 1px solid rgba(250, 204, 21, 0.7);
 }
