@@ -1,0 +1,201 @@
+/* General page styling */
+body {
+    background-color: #111827;
+    color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Header with repeated faded Las Vegas sign background */
+header {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background-color: #7f1d1d;
+    padding: 50px 35px;
+    text-align: center;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    background-image: url("images/las-vegas-sign.jpg");
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 260px auto;
+    opacity: 0.22;
+    mix-blend-mode: screen;
+}
+
+header h1,
+header p {
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
+    color: #facc15;
+    font-size: 42px;
+    margin: 0;
+}
+
+header p {
+    color: #ffffff;
+    font-size: 18px;
+}
+
+/* Navigation menu */
+nav {
+    background-color: #1f2937;
+    padding: 18px;
+    text-align: center;
+}
+
+nav a {
+    color: #facc15;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Main page content */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+}
+
+section {
+    background-color: #1f2937;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #facc15;
+}
+
+p,
+li {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* Website images */
+main img {
+    display: block;
+    width: 100%;
+    max-width: 850px;
+    max-height: 600px;
+    object-fit: contain;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+/* Image credits */
+.image-credit {
+    color: #d1d5db;
+    font-size: 13px;
+    text-align: center;
+    margin-top: -10px;
+}
+
+.image-credit a {
+    color: #facc15;
+}
+
+/* Feedback form */
+form {
+    background-color: #374151;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    color: #facc15;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 6px;
+    padding: 10px;
+    border: 1px solid #9ca3af;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #facc15;
+    color: #111827;
+    margin-top: 20px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ffffff;
+}
+
+/* Footer with repeated poker chip background */
+footer {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background-color: #7f1d1d;
+    padding: 35px 20px;
+    text-align: center;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    background-image: url("images/chip.png");
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 95px auto;
+    opacity: 0.28;
+}
+
+/* Styled footer text */
+footer p {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin: 0;
+    padding: 7px 20px;
+    color: #facc15;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
+    background-color: rgba(17, 24, 39, 0.45);
+    border-top: 1px solid rgba(250, 204, 21, 0.7);
+    border-bottom: 1px solid rgba(250, 204, 21, 0.7);
+}
